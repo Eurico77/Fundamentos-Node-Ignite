@@ -3,27 +3,31 @@ const app = require('../app');
 
 const router = Router()
 
+const cousers = [
+    {
+        id: 1,
+        nome: 'Sitemas'
+    },
+    {
+        id: 2,
+        nome: 'Informatica'
+    },
+    {
+        id: 3,
+        nome: 'Administracao'
+    }
+]
+
 router.get('/courses', (request, response ) => {
 
-    return response.json([
-        {
-            id: 1,
-            nome: 'Sitemas'
-        },
-        {
-            id: 2,
-            nome: 'Informatica'
-        },
-        {
-            id: 3,
-            nome: 'Administracao'
-        }
-    ])
+    return response.json(cousers)
 
 })
 
 router.post('/courses', (request, response) => {
-    return response.json({ola: true})
+   const data = request.body
+    const result = cousers.push(data)
+  return response.json(result).status(201)
 })
 
 router.put('/cousers/:id', (request, response) => {
