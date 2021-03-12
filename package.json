@@ -5,7 +5,13 @@
   "repository": "git@github.com:Eurico77/Fundamentos-Node-Ignite.git",
   "author": "Eurico Magalhães <euricomagalhaes61@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
