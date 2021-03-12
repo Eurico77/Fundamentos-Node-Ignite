@@ -2,8 +2,10 @@ const { Router } = require('express');
 
 const router = Router()
 
-router.get('/',(request, respose, next ) => {
+router.get('/',(request, response ) => {
 
-    respose.json({message: ' ola mundo '})
+    return response.json({message: ' ola mundo '})
 
 })
+
+module.exports = router
